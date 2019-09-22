@@ -1,0 +1,12 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <button v-on:click='increase(2, $event)'>Click me!</button>
+    <p> {{ counter }}</p>
+    <p v-on:mousemove='updateCoords'>
+    Coordinates: {{ x }} / {{ y }}
+    
+    <!-- a shorthand for stopProapagation-->
+    - <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </p>
+</div>
